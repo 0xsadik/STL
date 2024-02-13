@@ -1,9 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define sesh '\n';
 
 int main()
 {
+
     vector<int> v;
 
     v.push_back(1);
@@ -12,12 +12,14 @@ int main()
     v.push_back(4);
     v.push_back(5);
 
-    cout << v[0] << sesh;
-    cout << v[3] << sesh;
+    // to know vector's size 
 
-    // another way to print
-    cout << v.at(0) << sesh;
-    cout << v.at(3) << sesh;
+    cout << v.size() << '\n';
+
+    // print all elements
+    for (int i = 0; i < v.size(); i++) {
+        cout << v[i] << ' ';
+    }
 
     return 0;
 }
