@@ -50,3 +50,74 @@
 	cout << count << sesh;
 
 
+
+// lower_bound()
+
+//lower_bound() method is used to find the iterator pointing to the first element in the set that is " not less than " the given value.
+
+	set<int> s = {1, 3, 5, 7, 9};
+	
+	auto it = s.lower_bound(4);
+	cout << *it << sesh;
+
+// another example:
+	set<int> s = {1, 3, 5, 7, 9};
+	
+	set<int>::iterator it = s.lower_bound(4);
+	if (it != s.end()) {
+		cout << "lower bound of 4 : " << *it << '\n';
+	}
+	else {
+		cout << "4 not found in the set!!" << '\n';
+	}
+
+
+// upper_bound()
+// upper_bound() method is used to find the iterator pointing to the first element in the set that is "greater than " the given value.
+	set<int> s = {1, 3, 5, 7, 9};
+	
+	auto it = s.upper_bound(4);
+	cout << *it << '\n';
+
+
+// another example: 
+
+	set<int> s = {1, 3, 5, 7, 9};
+	
+	set<int>::iterator it = s.upper_bound(4);
+	if (it != s.end()) {
+		cout << "upper bound of 4 : " << *it << '\n';
+	}
+	else {
+		cout << "4 not found in the set!!" << '\n';
+	}
+
+
+
+// swap()
+
+	set<int> s = {1, 3, 5, 7, 9};
+	set<int> s2 = {1, 2, 3, 4, 5};
+
+	cout << "Before swap() s:\n";
+	for (int e : s) {
+		cout << e  << ' ';
+	}
+	cout << "\nBefore swap() s2: \n";
+	for (int e : s2) {
+		cout << e << ' ';
+	}
+
+	s.swap(s2);
+
+	cout << "After swap() s: \n";
+	for (int e : s) {
+		cout << e << ' ';
+	}
+	cout << "\nAfter swap() s2:\n";
+	for (int e : s2) {
+		cout << e << ' ';
+	}
+
+
+
