@@ -132,3 +132,56 @@
     int cnt = mp.count(1);
     cout << "count of 1: " << cnt << sesh;
 
+
+// lower_bound()
+
+    map<string, int> mp = {
+        {"apple", 120},
+        {"banana", 40},
+        {"pineapple", 50},
+        {"date", 450}
+    };
+
+    auto it = mp.lower_bound("date");
+    if (it != mp.end()) {
+        cout << "Found element: " << it-> first << ' ' << it->second;
+    }
+    else {
+        cout << "Not found!";
+    }
+
+
+
+// upper_bound() 
+
+    map<string, int> mp = {
+        {"apple", 120},
+        {"banana", 40},
+        {"pineapple", 50},
+        {"date", 450}
+    };
+
+    auto it = mp.upper_bound("date");
+    if (it != mp.end()) {
+        cout << "Found element: " << it-> first << ' ' << it->second;
+    }
+    else {
+        cout << "Not found!";
+    }
+
+
+// equal_range()
+
+    map<string, int> mp = {
+        {"apple", 120},
+        {"banana", 40},
+        {"pineapple", 50},
+        {"date", 450}
+    };
+
+    auto range = mp.equal_range("banana");
+    for (auto it = range.first; it != range.second; it++) {
+        cout << it -> first << '-' << it -> second << sesh;
+    }
+
+
